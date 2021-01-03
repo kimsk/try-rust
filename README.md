@@ -1,0 +1,6 @@
+- [The Rust Programming Language](https://doc.rust-lang.org/book/)
+- [Introduction to Rust, Gints Dreimanis](https://serokell.io/blog/rust-guide)
+- [Dhghomon/easy_rust](https://github.com/Dhghomon/easy_rust)
+- [What is Rust and why is it so popular (2020-1-20)? Jake Goulding](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
+- [Tour of Rust](https://tourofrust.com/)
+- [Rust Linz, August 2020 - Ryan Levick - Why should I care about Rust?](youtube.com/watch?v=OhCjnyBc448)
