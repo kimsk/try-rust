@@ -22,10 +22,11 @@ fn main() {
         // convert a value of guess from string to u32
         // using Shadowing
         let guess: u32 = 
-            match guess.trim().parse() {
+            match guess
+                    .trim()
+                    .parse() {
                 Ok(num) => num,
                 Err(_) => continue, // Use match expression to handling the error.
-
             };
         println!("You guessed: {}", guess);
 
