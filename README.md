@@ -7,12 +7,17 @@
 - [Introduction to Rust, Gints Dreimanis](https://serokell.io/blog/rust-guide)
 - [Dhghomon/easy_rust](https://github.com/Dhghomon/easy_rust)
 
+## [Memory Management & Ownership Model](Ownership.md)
+
 ## Talks
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
 - [RustConf 2019 - Closing Keynote by Lin Clark](https://www.youtube.com/watch?v=KFpU30xluxo)
 - [RustConf 2020 - Closing Keynote by Siân Griffin](https://www.youtube.com/watch?v=RNsEsZbXE-4)
 
+- [Rust and WASM in less then 20 minutes - Antonio De La Cruz](https://www.youtube.com/watch?v=ltP-8PXRqrw)
+
 ## References
 - [Learn Rust](https://www.rust-lang.org/learn)
 - [The Rust Standard Library](https://doc.rust-lang.org/std/index.html)
 - [The Rust community’s crate registry](https://crates.io/)
+- [Rust Playground](https://play.rust-lang.org/)
