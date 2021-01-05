@@ -58,6 +58,7 @@ fn main() {
     // cargo check is fine
     // cargo build gives error
     println!("a is {:?}", a);
+    println!("a.len() is {}", a.len());
     println!("a[0] is {}, a[1] is {}...", a[0], a[1]);
     let a1 = [3; 5];
     let a2 = [3, 3, 3, 3, 3]; // a1 == a2
@@ -89,7 +90,6 @@ fn main() {
 
     let counter_loop_20_result = counter_loop(20);
     println!("counter_loop_20_result is {}", counter_loop_20_result);
-
     lift_while(7);
     for_loop(a);
     lift_loop(7);
