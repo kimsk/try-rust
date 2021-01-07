@@ -4,10 +4,6 @@
 use unicode_segmentation::UnicodeSegmentation;
 pub fn reverse(input: &str) -> String {
     //unimplemented!("Write a function to reverse {}", input);
-    let result:String =
-        input
-        .graphemes(true)
-        .rev()
-        .collect::<String>();
+    let result: String = input.graphemes(true).rev().collect::<String>();
     result
 }
