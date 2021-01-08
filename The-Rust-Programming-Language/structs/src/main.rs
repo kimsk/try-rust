@@ -6,6 +6,35 @@ pub struct User {
     active: bool,
 }
 
+#[derive(Debug)] // let you print {:?}
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+
+    fn square(size: u32) -> Rectangle {
+        Rectangle {
+            width: size,
+            height: size,
+        }
+    }
+}
+
+impl Rectangle {
+    // mutable, suspicious code
+    fn area_moved(self) -> u32 {
+        self.width * self.height
+    }
+}
+
 fn main() {
     // mutable struct
     let mut user1 = User {
@@ -29,6 +58,41 @@ fn main() {
     println!("Hello, {}", user3.username);
 
     try_tuple_structs();
+    try_rectangles();
+}
+
+fn try_rectangles() {
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!("rect1 is {:?}", rect1);
+    println!("rect1 is {:#?}", rect1);
+    println!("rect1 area(&self) is {}", rect1.area());
+    let _x = rect1.height;
+    println!("rect1 area_moved(self) is {}", rect1.area_moved());
+    // height moved, below doesn't compile
+    // let _y = rect1.height;
+
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+    };
+    let rect2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+    let rect3 = Rectangle {
+        width: 60,
+        height: 45,
+    };
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
+
+    let sq = Rectangle::square(3);
+    println!("sq is {:#?}", sq);
 }
 
 fn try_tuple_structs() {
