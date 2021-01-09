@@ -1,0 +1,1 @@
+[Learning Rust: Memory, Ownership and Borrowing](https://www.youtube.com/watch?v=8M0QfLUDaaA&list=WL)

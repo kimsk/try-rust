@@ -9,6 +9,10 @@
 
 ## [Memory Management & Ownership Model](Ownership.md)
 
+### Pascal Precht
+- [A closer look at Ownership in Rust (28 October 2019)](https://blog.thoughtram.io/ownership-in-rust/)
+
+
 ## Talks
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
 - [RustConf 2019 - Closing Keynote by Lin Clark](https://www.youtube.com/watch?v=KFpU30xluxo)
