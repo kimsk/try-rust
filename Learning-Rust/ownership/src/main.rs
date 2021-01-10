@@ -1,6 +1,11 @@
-#[allow(unused_variables)]
-#[allow(dead_code)]
-#[allow(unused_mut)]
+#![allow(unused_variables)]
+#![allow(dead_code)]
+#![allow(unused_mut)]
+mod emoji;
+mod reference_in_rust;
+mod ownership_in_rust;
+use emoji::emoji;
+
 fn main() {
     let mut x = String::from("HELLO");
     let mut a = x; // "HELLO" was moved to a
@@ -18,7 +23,7 @@ fn main() {
     println!("can't read a, b is {}, x is moved", b);
 
     // borrowing
-    let mut x = String::from("HELLO"); 
+    let mut x = String::from("HELLO");
     {
         let y = &x; // borrow as immutable
         let z = &x;
@@ -42,33 +47,38 @@ fn main() {
 
     emoji();
 
-}
+    let s = String::from("hello world");
 
-fn emoji() {
-    let sparkle_heart = vec![240, 159, 146, 150];
-    let y = String::from_utf8(sparkle_heart).unwrap();
-    
-    println!("y {} length {}, capacity {}", y, y.len(), y.capacity());
-    println!("🔥 length {}", "🔥".len());
+    let hello = &s[0..5]; // borrowed
+    let world = &s[6..11]; // borrowed
+
+    let hello2 = &s[..5]; // borrowed
+    let world2 = &s[6..]; // borrowed
+
+    ownership_in_rust::ownership_in_rust();
+    reference_in_rust::reference_in_rust();
+    reference_in_rust::shared_and_mutable_references();
+    reference_in_rust::dereferencing_references();
 }
 
 fn drop_string(_s: String) {}
-fn return_ownership(s: String) -> String {s}
+fn return_ownership(s: String) -> String {
+    s
+}
 
 fn example_fn(
     moved: String,
     read_only_borrowed: &String,
     mutable_borrowed: &mut String,
-    mutable_ref_borrowed: &mut str) {
-        println!("moved {}" , moved);
-        println!("read_only_borrowed {}", read_only_borrowed);
-        mutable_borrowed.push('!');
-        println!("mutable_borrowed {}", mutable_borrowed);
-        let mut x = mutable_ref_borrowed.to_lowercase();
-        //mutable_ref_borrowed = x;
-        println!("mutable_ref_borrowed {}", mutable_ref_borrowed);
-        x.push('.');
-        println!("mut x {}", x);
-
-
-    }
+    mutable_ref_borrowed: &mut str,
+) {
+    println!("moved {}", moved);
+    println!("read_only_borrowed {}", read_only_borrowed);
+    mutable_borrowed.push('!');
+    println!("mutable_borrowed {}", mutable_borrowed);
+    let mut x = mutable_ref_borrowed.to_lowercase();
+    //mutable_ref_borrowed = x;
+    println!("mutable_ref_borrowed {}", mutable_ref_borrowed);
+    x.push('.');
+    println!("mut x {}", x);
+}
