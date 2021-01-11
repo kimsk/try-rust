@@ -1,4 +1,5 @@
 ## Why Rust?
+- [Considering Rust - February 2020 - Jon Gjengset](youtube.com/watch?v=DnT-LUQgc7s)
 - [Rust Linz, August 2020 - Ryan Levick - Why should I care about Rust?](youtube.com/watch?v=OhCjnyBc448)
 - [What is Rust and why is it so popular (2020-1-20)? Jake Goulding](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
 
@@ -8,10 +9,6 @@
 - [Dhghomon/easy_rust](https://github.com/Dhghomon/easy_rust)
 
 ## [Memory Management & Ownership Model](Ownership.md)
-
-### Pascal Precht
-- [A closer look at Ownership in Rust (28 October 2019)](https://blog.thoughtram.io/ownership-in-rust/)
-
 
 ## Talks
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
@@ -25,3 +22,5 @@
 - [The Rust Standard Library](https://doc.rust-lang.org/std/index.html)
 - [The Rust community’s crate registry](https://crates.io/)
 - [Rust Playground](https://play.rust-lang.org/)
+- [Rust Design Patterns](https://rust-unofficial.github.io/patterns/intro.html)
+- [Writing an OS in Rust - Philipp Oppermann](https://os.phil-opp.com/)

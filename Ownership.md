@@ -100,3 +100,7 @@ let a = [1, 2, 3, 4, 5];
 
 let slice = &a[1..3];
 ```
+
+## References
+- [Understanding Ownership - The Rust Programming Language](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
+- [A closer look at Ownership in Rust (28 October 2019) - Pascal Precht](https://blog.thoughtram.io/ownership-in-rust/)
