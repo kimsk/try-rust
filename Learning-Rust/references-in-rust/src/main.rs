@@ -41,6 +41,7 @@ fn main() {
     let mut mutable_numbers: [i32;3] = [3, 1, 2];
     println!("original mutable_numbers {:?}", mutable_numbers);
     mutable_numbers.sort(); // sort(&mut self) -- mutable borrow
+    // `.` operator will implicitly borrow a reference to its left operand
     println!("sorted mutable_numbers {:?}", mutable_numbers);
     sort_desc(&mut mutable_numbers);
     println!("sorted desc mutable_numbers {:?}", mutable_numbers);
