@@ -1,0 +1,1 @@
+pub mod ownership_in_rust_mod;

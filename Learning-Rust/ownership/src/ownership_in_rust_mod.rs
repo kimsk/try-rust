@@ -2,7 +2,7 @@
 #![allow(unused_variables)]
 #![allow(unused_mut)]
 
-pub fn ownership_in_rust() {
+pub fn ownership_in_rust_fn() {
     let s: &str = "Have a nice day";
     let s: String = "Have a nice day".to_string();
     let names: Vec<String> = vec!["Pascal".to_string(), "Christoph".to_string()];

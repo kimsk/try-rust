@@ -3,8 +3,9 @@
 #![allow(unused_mut)]
 mod emoji;
 mod reference_in_rust;
-mod ownership_in_rust;
-use emoji::emoji;
+mod ownership_in_rust_mod;
+mod ownership_in_rust_folder;
+use emoji::emoji as emooji;
 
 fn main() {
     let mut x = String::from("HELLO");
@@ -45,7 +46,8 @@ fn main() {
     let aa = xx;
     println!("xx {} aa {}", xx, aa);
 
-    emoji();
+    // emoji::emoji
+    emooji();
 
     let s = String::from("hello world");
 
@@ -55,7 +57,12 @@ fn main() {
     let hello2 = &s[..5]; // borrowed
     let world2 = &s[6..]; // borrowed
 
-    ownership_in_rust::ownership_in_rust();
+    // mod::fn
+    ownership_in_rust_mod::ownership_in_rust_fn();
+    
+    ownership_in_rust_folder::ownership_in_rust_mod::ownership_in_rust_fn();
+
+    // file::fn
     reference_in_rust::reference_in_rust();
     reference_in_rust::shared_and_mutable_references();
     reference_in_rust::dereferencing_references();

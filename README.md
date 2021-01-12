@@ -14,6 +14,8 @@
 
 ## Game Development
 - [Are we game yet?](https://arewegameyet.rs/)
+- [Bevy — Rust Game Engine](https://gamefromscratch.com/bevy-rust-game-engine/)
+- [Bevy](https://bevyengine.org/)
 
 ## Talks
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
