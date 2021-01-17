@@ -46,9 +46,10 @@ pub fn shared_and_mutable_references() {
 }
 
 pub fn dereferencing_references() {
-  let x = 10;
-  let r = &&x;
+  let x: i32 = 10;
+  let r: &&i32 = &&x;
 
+  // *
   if **r == 10 {
     println!("Same! {} {}", x, r); //
   }

@@ -12,13 +12,13 @@ fn main() {
     greet_str(name2);
 
     let ping: &str = "Ping";
-    // &ping points to preallocated read-only memory with "Ping"
+    // &ping points to pre-allocated read-only memory with "Ping"
     // println!("*ping {}", *ping); // doesn't have a size known at compile-time
     println!("ping \t{}", ping); // dereferencing implicitly
     println!("&ping \t{}", &ping); // dereferencing implicitly
     println!("&&ping \t{}", &&ping); // dereferencing implicitly
     println!("&&&ping {}", &&&ping); // dereferencing implicitly
-    println!("*&ping \t{}", *&ping);
+    println!("*&ping \t{}", *&ping); // dereferencing explicitly
 
 }
 
