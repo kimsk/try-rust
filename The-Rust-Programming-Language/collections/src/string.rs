@@ -39,6 +39,18 @@ pub fn rust_string() {
   bytes_scalar_grapheme("สวัสดี");
   bytes_scalar_grapheme("नमस्ते");
 
+  str_string();
+}
+
+fn str_string() {
+  let s: &'static str = "TEST"; // string literal (static)
+  let s: &str = &s[..]; // string slice
+  let s: std::string::String = s.to_string();
+  let s: std::string::String = String::from(s);
+  let s: &str = &s[..]; // string slice
+  let s: std::string::String = String::from(s); // std::string::String
+  let s: std::string::String = "TEST".to_owned(); // cloned
+  let s: std::string::String = s.to_owned();
 }
 
 fn bytes_scalar_grapheme(hello: &str) {
