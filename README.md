@@ -33,6 +33,7 @@
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
 - [RustConf 2019 - Closing Keynote by Lin Clark](https://www.youtube.com/watch?v=KFpU30xluxo)
 - [RustConf 2020 - Closing Keynote by Siân Griffin](https://www.youtube.com/watch?v=RNsEsZbXE-4)
+- [How I Convinced the World's Largest Package Manager to Use Rust, and So Can You! - May 2017 - Ashley Williams](https://www.youtube.com/watch?v=GCsxYAxw3JQ)
 
 ## References
 - [Learn Rust](https://www.rust-lang.org/learn)

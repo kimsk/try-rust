@@ -142,14 +142,13 @@ fn pig_latin(str: &str) {
     }
     //println!("map {:?}", map);
     let first = str.graphemes(true).nth(0);
-    let result;
     match first {
         Some (first) => {
             let first_lowercase = &first.to_ascii_lowercase()[..];
-            match map.get(first_lowercase) {
+            let result = match map.get(first_lowercase) {
                 Some(_) => {
                     // Words that start with a vowel have “hay” added to the end instead (“apple” becomes “apple-hay”)
-                    result = format!("{}-hay", &str);
+                    format!("{}-hay", &str)
                 },
                 None => {
                     // The first consonant of each word is moved to the end of the word and “ay” is added, so “first” becomes “irst-fay.”
@@ -159,7 +158,7 @@ fn pig_latin(str: &str) {
                             word.push_str(s);
                         }
                       } 
-                    result = format!("{}-{}ay", word, first);
+                    format!("{}-{}ay", word, first)
                 }
             };
             println!("first: {:?} {} -> {}", first, str, result);
