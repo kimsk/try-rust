@@ -4,13 +4,17 @@ use std::io::Error;
 use std::io::ErrorKind;
 use std::io::Read;
 
+mod guess;
+use guess::Guess;
+use guess::Guess2;
+
 // Rust groups errors into two major categories: recoverable and unrecoverable errors.
 
 // Most languages don’t distinguish between these two kinds of errors and handle both in the same way, using mechanisms such as exceptions. Rust doesn’t have exceptions. Instead, it has the type Result<T, E> for recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable error.
 
-// By default, when a panic occurs, the program starts unwinding, which means Rust walks back up the stack and cleans up the data from each function it encounters. 
+// By default, when a panic occurs, the program starts unwinding, which means Rust walks back up the stack and cleans up the data from each function it encounters.
 
-// The alternative is to immediately abort, which ends the program without cleaning up. Memory that the program was using will then need to be cleaned up by the operating system. 
+// The alternative is to immediately abort, which ends the program without cleaning up. Memory that the program was using will then need to be cleaned up by the operating system.
 
 // returning Result is a good default choice when you’re defining a function that might fail.
 
@@ -20,11 +24,32 @@ use std::io::Read;
 
 // If in your project you need to make the resulting binary as small as possible, you can switch from unwinding to aborting upon a panic by adding panic = 'abort' to the appropriate [profile] sections in your Cargo.toml file.
 
+// When your code performs operations on values, your code should verify the values are valid first and panic if the values aren’t valid. This is mostly for safety reasons: attempting to operate on invalid data can expose your code to vulnerabilities.
+
+// Functions often have contracts: their behavior is only guaranteed if the inputs meet particular requirements. Panicking when the contract is violated makes sense because a contract violation always indicates a caller-side bug and it’s not a kind of error you want the calling code to have to explicitly handle.
+
+// Contracts for a function, especially when a violation will cause a panic, should be explained in the API documentation for the function.
+
 // RUST_BACKTRACE=1 cargo run
 fn main() {
     // panic();
     // panic2();
-    open_file();
+    // open_file();
+
+    let g = Guess::new(10);
+    guessing(g);
+
+    let g2 = Guess2::new(101);
+    println!("{:?} {:?}", g2.value(), Guess2::new(20));
+    let _a: u32 = subtract(1, 2);
+}
+
+fn guessing(v: Guess) {
+    println!("{:?} {}", v, v.value());
+}
+
+fn subtract(a: u32, b: u32) -> u32 {
+    a - b // negative causes panicked at 'attempt to subtract with overflow'
 }
 
 fn read_username_from_file_fs() -> Result<String, Error> {
@@ -35,13 +60,12 @@ fn read_username_from_file3() -> Result<String, Error> {
     let mut s = String::new();
 
     // chain ?
-    File::open("hello.txt")?
-        .read_to_string(&mut s)?;
+    File::open("hello.txt")?.read_to_string(&mut s)?;
 
     Ok(s)
 }
 
-fn read_username_from_file_unwrap() -> Result<String, Error>  {
+fn read_username_from_file_unwrap() -> Result<String, Error> {
     let mut f = File::open("hello.txt").unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
             File::create("hello.txt").unwrap_or_else(|_| {
@@ -60,11 +84,11 @@ fn read_username_from_file_unwrap() -> Result<String, Error>  {
 
 // This pattern of propagating errors is so common in Rust that Rust provides the question mark operator ? to make this easier.
 
-// Unlike unwrap_or_else, error values that have the ? operator called on them go through the from function, defined in the From trait in the standard library, which is used to convert errors from one type into another. 
+// Unlike unwrap_or_else, error values that have the ? operator called on them go through the from function, defined in the From trait in the standard library, which is used to convert errors from one type into another.
 
 // the `?` operator can only be used in a function that returns `Result` or `Option` (or another type that implements `std::ops::Try`)
 fn read_username_from_file2() -> Result<String, Error> {
-    // If the value of the Result from File::open is an Ok, the value inside the Ok will be assigned to f from this expression, and the program will continue. 
+    // If the value of the Result from File::open is an Ok, the value inside the Ok will be assigned to f from this expression, and the program will continue.
     let mut f = File::open("hello.txt")?;
     let mut s = String::new();
     f.read_to_string(&mut s)?;
@@ -90,12 +114,9 @@ fn read_username_from_file() -> Result<String, Error> {
 }
 
 fn unwrap_expect() {
-    let f = File::open("hello.txt")
-        .unwrap();
+    let f = File::open("hello.txt").unwrap();
 
-    let f = File::open("hello.txt")
-        .expect("Failed to open hello.txt");
-
+    let f = File::open("hello.txt").expect("Failed to open hello.txt");
 }
 
 fn open_file_unwrap_or_else() {
