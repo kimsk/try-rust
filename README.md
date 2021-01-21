@@ -1,7 +1,9 @@
 ## Why Rust?
 - [Considering Rust - February 2020 - Jon Gjengset](youtube.com/watch?v=DnT-LUQgc7s)
-- [Rust Linz, August 2020 - Ryan Levick - Why should I care about Rust?](youtube.com/watch?v=OhCjnyBc448)
-- [What is Rust and why is it so popular (2020-1-20)? Jake Goulding](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
+- [Why should I care about Rust? - Rust Linz, August 2020 - Ryan Levick - ](youtube.com/watch?v=OhCjnyBc448)
+- [What is Rust and why is it so popular? - January 2020 - Jake Goulding](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
+- [Why Not Rust? - September 2020 - Aleksey Kladov](https://matklad.github.io/2020/09/20/why-not-rust.html)
+- [Why Discord is switching from Go to Rust - February 2020 - Jesse Howarth](https://blog.discord.com/why-discord-is-switching-from-go-to-rust-a190bbca2b1f)
 
 ## Rust Intro.
 - [Tour of Rust](https://tourofrust.com/)
