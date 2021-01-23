@@ -7,6 +7,8 @@ use std::io::Read;
 mod guess;
 use guess::Guess;
 use guess::Guess2;
+use guess::Guess3;
+
 
 // Rust groups errors into two major categories: recoverable and unrecoverable errors.
 
@@ -39,9 +41,21 @@ fn main() {
     let g = Guess::new(10);
     guessing(g);
 
+
     let g2 = Guess2::new(101);
     println!("{:?} {:?}", g2.value(), Guess2::new(20));
+
+    match guess3() {
+        | Ok(value) => println!("g3 {}", value),
+        | Err(error) => println!("g3 {}", error)
+    }
+
     let _a: u32 = subtract(1, 2);
+}
+
+fn guess3() -> Result<i32, String>  {
+    let g = Guess3::new(101)?;
+    Ok(g.value())
 }
 
 fn guessing(v: Guess) {
