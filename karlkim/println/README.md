@@ -1,0 +1,2 @@
+- [Easy Rust - More about printing](https://erasin.wang/books/easy-rust/Chapter_12.html)
+- [varunsrin/rusty_money](https://github.com/varunsrin/rusty_money)
