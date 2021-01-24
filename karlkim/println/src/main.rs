@@ -2,22 +2,35 @@ use std::fmt;
 use rusty_money::{Money, iso};
 
 #[derive(Debug)]
+enum Team {
+    Red,
+    Green,
+    Blue
+}
+impl fmt::Display for Team {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match *self {
+            Team::Red => write!(f, "🔴"),
+            Team::Green => write!(f, "🟢"),
+            Team::Blue => write!(f, "🔵"),
+        }
+    }
+}
+
+#[derive(Debug)]
 struct Person {
     name: &'static str,
     age: u8,
+    team: Team
 }
 impl fmt::Display for Person {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        write!(f, "name: {}, age: {}", self.name, self.age)
+        write!(f, "team: {}, name: {}, age: {}", self.team, self.name, self.age)
     }
 }
 
 fn main() {
-    let p = Person {
-        name: "Rustacean 🦀",
-        age: 42,
-    };
-
+    let p = Person { name: "Rustacean 🦀", age: 42, team: Team::Red };
     // positioning
     println!("age: {1}, name: {0}, number: {2}", p.name, p.age, 7);
     // named

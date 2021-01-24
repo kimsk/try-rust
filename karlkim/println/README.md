@@ -1,2 +1,3 @@
 - [Easy Rust - More about printing](https://erasin.wang/books/easy-rust/Chapter_12.html)
+- [Advanced usage of println!](https://riptutorial.com/rust/example/1248/advanced-usage-of-println-)
 - [varunsrin/rusty_money](https://github.com/varunsrin/rusty_money)
