@@ -1,5 +1,6 @@
 use std::fmt;
 use rusty_money::{Money, iso};
+use colored::*;
 
 #[derive(Debug)]
 enum Team {
@@ -32,12 +33,15 @@ impl fmt::Display for Person {
 fn main() {
     let p = Person { name: "Rustacean 🦀", age: 42, team: Team::Red };
     // positioning
-    println!("age: {1}, name: {0}, number: {2}", p.name, p.age, 7);
+    println!("team: {2}, name: {0}, age: {1}", p.name, p.age, p.team);
     // named
-    println!("age: {age}, name: {name}, number: {number}",
+    println!("team: {team}, name: {name}; {motto}",
         name = p.name,
-        age = p.age,
-        number = 7);
+        team = p.team,
+        motto = "Come on you Reds!");
+
+    let p2 = Person { name: "SeeSharp", age: 60, team: Team::Blue };
+    println!("{rust:#?} พบกับ {csharp:#?}", rust = p, csharp = p2);
 
     // fmt::Display
     println!("{}", p);
@@ -59,18 +63,36 @@ fn main() {
     println!("{person:?}", person = p);
 
     // padding
-    print_stock("AMZN", 3_290_15, 3_294_95);
-    //=======================AMZN=======================
-    //|          bid           |          ask          |
-    //-------------------------+------------------------
-    //|       $3,290.15        |       $3,294.95       |
-    //-------------------------+------------------------
+    let stocks = vec![
+        ("AMZN", 3_290_15, 3_294_95),
+        ("GOOGL", 1885_00, 1902_09),
+        ("FB", 275_70, 276_20) 
+    ];
+
+    for (ticker, bid, ask) in stocks {
+        print_stock(ticker, bid, ask);
+    }
+// =======================AMZN=======================
+// |          bid           |          ask          |
+// -------------------------+------------------------
+// |       $3,290.15        |       $3,294.95       |
+// -------------------------+------------------------
+// ======================GOOGL=======================
+// |          bid           |          ask          |
+// -------------------------+------------------------
+// |       $1,885.00        |       $1,902.09       |
+// -------------------------+------------------------
+// ========================FB========================
+// |          bid           |          ask          |
+// -------------------------+------------------------
+// |        $275.70         |        $276.20        |
+// -------------------------+------------------------
 }
 
 // padding sample
 fn print_stock(ticker: &str, bid: i64, ask: i64) {
     // total length 50, ticker in the middle, pad left and right with =
-    println!("{:=^50}", ticker);
+    println!("{:=^50}", ticker.blue().bold());
     // |
     // total length 24, bid in the middle, pad left and right with space
     // |

@@ -37,7 +37,8 @@
 - [Rust, Arduino and Embedded Development as a Beginner](https://blog.cecton.com/posts/rust-and-arduino-part1/)
 - [Rust for IOT](https://www.youtube.com/watch?v=P3RUm6__xs4)
 
-## WebAssembly
+## Web, WebAssembly
+- [Are we web yet?](https://www.arewewebyet.org/)
 - [Rust 🦀 and WebAssembly 🕸](https://rustwasm.github.io/docs/book/)
 - [Rust, WebAssembly, and the future of Serverless - September 2019 - Steve Klabnik](https://youtube.com/watch?v=CMB6AlE1QuI)
 - [Rust and WASM in less then 20 minutes - December 2019 - Antonio De La Cruz](https://www.youtube.com/watch?v=ltP-8PXRqrw)
@@ -50,6 +51,13 @@
 - [Bevy — Rust Game Engine](https://gamefromscratch.com/bevy-rust-game-engine/)
 - [Bevy](https://bevyengine.org/)
 - [Amethyst game engine](https://book.amethyst.rs/stable/)
+
+## Machine Learning
+- [Are we learning yet?](http://www.arewelearningyet.com/)
+
+## GUI
+- [Are we GUI Yet?](https://www.areweguiyet.com/)
+
 
 ## Talks
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)

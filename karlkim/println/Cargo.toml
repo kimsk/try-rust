@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 rusty-money = "0.4.1"
+colored = "2.0.0"
