@@ -1,5 +1,7 @@
 #![allow(dead_code)]
 use std::fmt;
+use std::env;
+
 use rusty_money::{Money, iso};
 use colored::*;
 
@@ -32,6 +34,11 @@ impl fmt::Display for Person {
 }
 
 fn main() {
+    let args: Vec<String> = env::args().collect();
+    let table_width =  match args[1].parse() {
+        Ok(v) => v,
+        _ => 50,
+    };
     // let p = Person { name: "Rustacean 🦀", age: 42, team: Team::Red };
     // // positioning
     // println!("team: {2}, name: {0}, age: {1}", p.name, p.age, p.team);
@@ -98,7 +105,8 @@ fn main() {
     ];
 
     for (ticker, bid, ask) in stocks {
-        print_stock(ticker, bid, ask);
+        // print_stock_pretty(ticker, bid, ask);
+        print_stock_pretty_with_table_width(table_width, ticker, bid, ask);
     }
 
     //
@@ -108,7 +116,7 @@ fn main() {
 }
 
 // padding sample
-fn old_print_stock(ticker: &str, bid: i64, ask: i64) {
+fn print_stock(ticker: &str, bid: i64, ask: i64) {
     // total length 50, ticker in the middle, pad left and right with =
     println!("{:=^50}", ticker.blue().bold());
     // |
@@ -127,11 +135,12 @@ fn old_print_stock(ticker: &str, bid: i64, ask: i64) {
 }
 
 //0111111111111111111100AMZN00111111111111111111110
+fn print_stock_pretty(ticker: &str, bid: i64, ask: i64) {
+    print_stock_pretty_with_table_width(50, ticker, bid, ask);
+}
 
-fn print_stock(ticker: &str, bid: i64, ask: i64) {
-    let stock = format!(" {} ", ticker).bold();
-    let table_width = 50;
-    let ticker_width = stock.len();
+fn print_stock_pretty_with_table_width(table_width: usize, ticker: &str, bid: i64, ask: i64) {
+    let ticker_width = ticker.len();
     let left_width = (table_width - ticker_width)/2;
     let right_width = (table_width - ticker_width)/2;
     let bid = Money::from_minor(bid, iso::USD);
@@ -143,7 +152,7 @@ fn print_stock(ticker: &str, bid: i64, ask: i64) {
     println!("right_width: {}", right_width);
 
     println!("{:>left_width$}{:─^ticker_width$}{:<right_width$}", "┌", "", "┐", left_width=left_width, right_width=right_width, ticker_width=ticker_width);
-    println!("┌{:─>left_width$}┤{}├{:─>right_width$}┐", "", stock, "", left_width=left_width-2, right_width=right_width-2);
+    println!("┌{:─>left_width$}┤{}├{:─>right_width$}┐", "", ticker, "", left_width=left_width-2, right_width=right_width-2);
     println!("│{: ^left_width$}└{:─^ticker_width$}┘{: ^right_width$}│", "bid", "┬", "ask", left_width=left_width-2, right_width=right_width-2, ticker_width=ticker_width);
     println!("├{:─^left_width$}{:─^ticker_width$}{:─^right_width$}┤", "", "┼", "", left_width=left_width-1, right_width=right_width-1, ticker_width=ticker_width);
     println!("│{: ^left_width$}{: ^ticker_width$}{: ^right_width$}│", bid.to_string(), "│", ask.to_string(), left_width=left_width-1, right_width=right_width-1, ticker_width=ticker_width);
