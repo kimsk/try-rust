@@ -20,6 +20,10 @@
 - [The Little Book of Rust Books](https://lborb.github.io/book/title-page.html)
 - [Rust Language Cheat Sheet](https://cheats.rs/)
 
+## Concepts
+- [My explanation of the main concepts in Rust - Sep 2016 - Darin Minamoto](https://gist.github.com/DarinM223/e7237114cfdcf3644f90#:~:text=There%20are%20three%20main%20concepts,when%20it%20will%20be%20destroyed)
+- [Zero-cost abstractions in Rust - Feb 2018 - Antonin Carette](https://carette.xyz/posts/zero_cost_abstraction/)
+
 ## [Memory Management & Ownership Model](Ownership.md)
 
 ## Macros
@@ -60,6 +64,7 @@
 
 
 ## Talks
+- [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
 - [RustConf 2019 - Closing Keynote by Lin Clark](https://www.youtube.com/watch?v=KFpU30xluxo)
 - [RustConf 2020 - Closing Keynote by Siân Griffin](https://www.youtube.com/watch?v=RNsEsZbXE-4)
