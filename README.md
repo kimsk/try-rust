@@ -62,6 +62,9 @@
 ## GUI
 - [Are we GUI Yet?](https://www.areweguiyet.com/)
 
+## Functional Programming
+- [YOW! Lambda Jam 2019 - Amit Dev - Introduction to Functional Programming in Rust](https://www.youtube.com/watch?v=9x7W3_KKKeA)
+
 
 ## Talks
 - [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)
