@@ -23,17 +23,31 @@ fn largest_char(list: &[char]) -> &char {
     largest
 }
 
-// fn largest<T>(list: &[T]) -> &T {
-//     let mut largest = &list[0];
+// return reference, don't need Clone or Copy traits
+fn largest0<T: PartialOrd>(list: &[T]) -> &T {
+    let mut largest = &list[0];
 
-//     for item in list {
-//         if item > largest {
-//             largest = item;
-//         }
-//     }
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
 
-//     largest
-// }
+    largest
+}
+
+
+fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+    let mut largest = list[0];
+
+    for &item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+
+    largest
+}
 
 struct Point<T, U> {
     x: T,
@@ -78,8 +92,11 @@ fn main() {
     println!("The largest char is {}", result);
 
 
-    // let result = largest(&number_list);
-    // println!("The largest number is {}", result);
+    let result = largest0(&number_list);
+    println!("The largest number is {}", result);
+
+    let result = largest(&number_list);
+    println!("The largest number is {}", result);
 
     let both_integer = Point { x: 5, y: 10 };
     let both_float = Point { x: 1.0, y: 4.0 };
