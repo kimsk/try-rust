@@ -5,6 +5,10 @@ mod emoji;
 mod reference_in_rust;
 mod ownership_in_rust_mod;
 mod ownership_in_rust_folder;
+mod other_mod;
+// `mod` declaration will look for a file named `emoji.rs` or `other_mod/mod.rs` and will insert its contents inside modules under this scope
+
+
 use emoji::emoji as emooji;
 
 fn main() {
@@ -66,6 +70,13 @@ fn main() {
     reference_in_rust::reference_in_rust();
     reference_in_rust::shared_and_mutable_references();
     reference_in_rust::dereferencing_references();
+
+    // mod.rs
+    other_mod::mod_test();
+    other_mod::a::a();
+    // otehr_mod::b::b(); // b is private
+
+
 }
 
 fn drop_string(_s: String) {}

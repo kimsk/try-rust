@@ -41,7 +41,7 @@ fn main() {
     //  Blanket implementation
     // impl<T: Display> ToString for T {
     // --snip--
-}
+
     println!("{}", tweet.to_string());
 
     println!("1 new tweet: {}", tweet.summarize());
