@@ -32,3 +32,8 @@
 1. Generic type parameters let you apply the code to different types.
 2. Traits and trait bounds ensure that even though the types are generic, they’ll have the behavior the code needs.
 3. You learned how to use lifetime annotations to ensure that this flexible code won’t have any **dangling references**.
+
+## Chapter 11: Writing Automated Tests
+1. The convention for **unit tests** is to create a module named tests in each file to contain the test functions and to annotate the module with `cfg(test)`.
+1. The `#[cfg(test)]` annotation on the tests module tells Rust to compile and run the test code only when you run `cargo test`, not when you run `cargo build`.
+1. In Rust, integration tests are entirely external to your library. They use your library in the same way any other code would, which means they can only call functions that are part of your library’s public API.
