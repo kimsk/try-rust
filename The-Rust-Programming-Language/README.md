@@ -37,3 +37,16 @@
 1. The convention for **unit tests** is to create a module named tests in each file to contain the test functions and to annotate the module with `cfg(test)`.
 1. The `#[cfg(test)]` annotation on the tests module tells Rust to compile and run the test code only when you run `cargo test`, not when you run `cargo build`.
 1. In Rust, integration tests are entirely external to your library. They use your library in the same way any other code would, which means they can only call functions that are part of your library’s public API.
+
+## Chapter 12: Building a Command Line Program
+1.  The Rust community has developed a process to use as a guideline for splitting the separate concerns of a binary program when main starts getting large. The process has the following steps:
+
+    1. Split your program into a main.rs and a lib.rs and move your program’s logic to lib.rs.
+    1. As long as your command line parsing logic is small, it can remain in main.rs.
+    1. When the command line parsing logic starts getting complicated, extract it from main.rs and move it to lib.rs.
+
+1. Using primitive values when a complex type would be more appropriate is an anti-pattern known as **primitive obsession**.
+1. Use the `Result` type to signal there was a problem by converting an `Err` variant into a more practical error for our users without the surrounding text about thread `main` and `RUST_BACKTRACE` that a call to `panic!` causes.
+1. `Box<dyn Error>` means the function will return a type that implements the Error trait, but we don’t have to specify what particular type the return value will be.
+1. `Ok(())` syntax is the idiomatic way to indicate that we’re calling `fn` for its side effects only; it doesn’t return a value we need.
+1. `if let` and `unwrap_or_else` allow us to process `Err`, but we use `if let` with a `fn` returning `Ok(())` which has nothing to **unwrap**.
