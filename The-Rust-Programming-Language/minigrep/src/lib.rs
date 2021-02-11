@@ -10,13 +10,9 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
-pub fn run0(config: Config) {
-    let contents = fs::read_to_string(config.filename)
-        .expect("Something went wrong reading the file");
-
-    println!("With text:\n{}", contents);
-}
-
+// https://stackoverflow.com/questions/57234140/how-to-assert-errors-in-rust
+// Result<T, E> only implements PartialEq when T and E also implement PartialEq
+#[derive(Debug, PartialEq)]
 pub struct Config {
     query: String,
     filename: String,
@@ -32,30 +28,28 @@ impl Config {
 
         Ok(Config { query, filename })
     }
-    pub fn new0(args: &[String]) -> Config {
-        if args.len() < 3 {
-            panic!("not enough arguments");
-        }
+}
 
-        let query = args[1].clone();
-        let filename = args[2].clone();
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-        Config { query, filename }
+    #[test]
+    fn not_enough_arguments() {
+        let args = ["minigrep".to_string(), "filename".to_string()];
+        let actual = Config::new(&args);
+        let expected = Err("not enough arguments");
+        assert_eq!(expected, actual);
     }
-}
 
-// `Clone` will make a full copy of the data for the `Config` instance to own, which takes more time and memory than storing a reference to the string data. However, cloning the data also makes our code very straightforward because we don’t have to manage the lifetimes of the references;
-pub fn parse_config(args: &[String]) -> Config {
-    let query = args[1].clone();
-    let filename = args[2].clone();
+    #[test]
+    fn enough_arguments() {
+        let query = "query";
+        let filename = "filename";
+        let args = ["minigrep".to_string(), String::from(query), String::from(filename)];
+        let actual = Config::new(&args);
+        let expected: Result<Config, &'static str> = Ok(Config { query: query.to_string(), filename: filename.to_string()});
+        assert_eq!(expected, actual);
+    }
 
-    Config { query, filename }
-}
-
-// Using primitive values when a complex type would be more appropriate is an anti-pattern known as primitive obsession.
-pub fn parse_config0(args: &[String]) -> (&str, &str) {
-    let query = &args[1];
-    let filename = &args[2];
-
-    (query, filename)
 }
