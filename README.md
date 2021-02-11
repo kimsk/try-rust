@@ -65,6 +65,12 @@
 ## Functional Programming
 - [YOW! Lambda Jam 2019 - Amit Dev - Introduction to Functional Programming in Rust](https://www.youtube.com/watch?v=9x7W3_KKKeA)
 
+## Finance
+- [`Probably` the fastest Black Scholes Pricer in world](https://mushfaqueronniechowdhury.medium.com/probably-the-fastest-black-scholes-pricer-in-world-34103e97f7eb)
+- [trade_rs is a open-source rust library targeted for algorithmic trading & financial use cases.](https://github.com/jakeschurch/trade_rs)
+- [TickGrinder Algorithmic Trading Platform](https://github.com/Ameobea/tickgrinder)
+- [Options Pricing ISPC example](https://github.com/rust-lang/packed_simd/tree/master/examples/options_pricing)
+- [How we built PayDirect](https://blog.truelayer.com/how-we-built-paydirect-82c9565f3fd2)
 
 ## Talks
 - [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)
