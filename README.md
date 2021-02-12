@@ -83,6 +83,9 @@
 - [RustConf 2020 - Closing Keynote by Siân Griffin](https://www.youtube.com/watch?v=RNsEsZbXE-4)
 - [How I Convinced the World's Largest Package Manager to Use Rust, and So Can You! - May 2017 - Ashley Williams](https://www.youtube.com/watch?v=GCsxYAxw3JQ)
 
+## Development Environment
+- [NixOS - Rust {#rust}](https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md)
+
 ## References
 - [Learn Rust](https://www.rust-lang.org/learn)
 - [The Rust Standard Library](https://doc.rust-lang.org/std/index.html)
