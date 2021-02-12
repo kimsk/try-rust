@@ -72,6 +72,10 @@
 - [Options Pricing ISPC example](https://github.com/rust-lang/packed_simd/tree/master/examples/options_pricing)
 - [How we built PayDirect](https://blog.truelayer.com/how-we-built-paydirect-82c9565f3fd2)
 
+## Terminal, Console
+- [Build Your Own Shell using Rust](https://www.joshmcguigan.com/blog/build-your-own-shell-rust/)
+- [http://ticki.github.io/blog/making-terminal-applications-in-rust-with-termion/](http://ticki.github.io/blog/making-terminal-applications-in-rust-with-termion/)
+
 ## Talks
 - [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)
 - [RustConf 2018 - Closing Keynote - Using Rust For Game Development by Catherine West (Blog)](https://kyren.github.io/2018/09/14/rustconf-talk.html)
