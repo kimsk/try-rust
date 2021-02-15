@@ -10,6 +10,15 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     Ok(())
 }
 
+// Notice that we need an explicit lifetime 'a defined in the signature of search and used with the contents argument and the return value.
+
+// In this case, we indicate that the returned vector should contain string slices that reference slices of the argument contents (rather than the argument query).
+
+// In other words, we tell Rust that the data returned by the search function will live as long as the data passed into the search function in the contents argument. This is important! The data referenced by a slice needs to be valid for the reference to be valid;
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    vec![]
+}
+
 // https://stackoverflow.com/questions/57234140/how-to-assert-errors-in-rust
 // Result<T, E> only implements PartialEq when T and E also implement PartialEq
 #[derive(Debug, PartialEq)]
@@ -50,6 +59,17 @@ mod tests {
         let actual = Config::new(&args);
         let expected: Result<Config, &'static str> = Ok(Config { query: query.to_string(), filename: filename.to_string()});
         assert_eq!(expected, actual);
+    }
+
+    #[test]
+    fn one_result() {
+        let query = "duct";
+        let contents = "\
+Rust:
+safe, fast, productive.
+Pick three.";
+
+        assert_eq!(vec!["safe, fast, productive."], search(query, contents));
     }
 
 }

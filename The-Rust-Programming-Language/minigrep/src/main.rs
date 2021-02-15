@@ -1,7 +1,7 @@
 #![allow(dead_code, unused_variables, unused_assignments)]
+use minigrep::Config;
 use std::env;
 use std::process;
-use minigrep::Config;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -27,4 +27,5 @@ fn main() {
         println!("Application error: {}", e);
 
         process::exit(1);
-    }}
+    }
+}
