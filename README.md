@@ -19,6 +19,7 @@
 - [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_0.html)
 - [The Little Book of Rust Books](https://lborb.github.io/book/title-page.html)
 - [Rust Language Cheat Sheet](https://cheats.rs/)
+- [You Want to Learn Rust but You Don’t Know Where to Start](https://towardsdatascience.com/you-want-to-learn-rust-but-you-dont-know-where-to-start-fc826402d5ba)
 
 ## Concepts
 - [My explanation of the main concepts in Rust - Sep 2016 - Darin Minamoto](https://gist.github.com/DarinM223/e7237114cfdcf3644f90#:~:text=There%20are%20three%20main%20concepts,when%20it%20will%20be%20destroyed)
@@ -72,9 +73,25 @@
 - [Options Pricing ISPC example](https://github.com/rust-lang/packed_simd/tree/master/examples/options_pricing)
 - [How we built PayDirect](https://blog.truelayer.com/how-we-built-paydirect-82c9565f3fd2)
 
-## Terminal, Console
+## Terminal, Console, Shell, etc.
 - [Build Your Own Shell using Rust](https://www.joshmcguigan.com/blog/build-your-own-shell-rust/)
 - [http://ticki.github.io/blog/making-terminal-applications-in-rust-with-termion/](http://ticki.github.io/blog/making-terminal-applications-in-rust-with-termion/)
+- [Nushell- A new type of shell.](https://www.nushell.sh/)
+- [7 Awesome Rust-powered Command-line Utilities](https://towardsdatascience.com/awesome-rust-powered-command-line-utilities-b5359c38692)
+    - [Starship - Cross-Shell Prompt](https://starship.rs/)
+    - [BurntSushi/ripgrep - ripgrep recursively searches directories for a regex pattern](https://github.com/BurntSushi/ripgrep)
+    - [sharkdp/bat - A cat(1) clone with wings](https://github.com/sharkdp/bat)
+    - [XAMPPRocky/tokei - Count your code, quickly](https://github.com/XAMPPRocky/tokei)
+    - [ogham/exa - A modern replacement for ‘ls’](https://github.com/ogham/exa)
+    - [sharkdp/fd - A simple, fast and user-friendly alternative to 'find'](https://github.com/sharkdp/fd)
+    - [dalance/procs - A modern replacement for ps written in Rust](https://github.com/dalance/procs)
+- [Rust-Powered Command-Line Utilities to Increase Your Productivity](https://towardsdatascience.com/rust-powered-command-line-utilities-to-increase-your-productivity-eea03a4cf83a)
+    - [bootandy/dust - A more intuitive version of du in rust](https://github.com/bootandy/dust)
+    - [nachoparker/dutree - a tool to analyze file system usage written in Rust](https://github.com/nachoparker/dutree)
+    - [sharkdp/hyperfine - A command-line benchmarking tool](https://github.com/sharkdp/hyperfine)
+    - [lotabout/skim - Fuzzy Finder in rust!](https://github.com/lotabout/skim)
+    - [chmln/sd - Intuitive find & replace CLI (sed alternative)](https://github.com/chmln/sd)
+    - [ClementTsang/bottom - Yet another cross-platform graphical process/system monitor](https://github.com/ClementTsang/bottom)
 
 ## Talks
 - [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)
