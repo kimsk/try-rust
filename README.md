@@ -92,6 +92,7 @@
     - [lotabout/skim - Fuzzy Finder in rust!](https://github.com/lotabout/skim)
     - [chmln/sd - Intuitive find & replace CLI (sed alternative)](https://github.com/chmln/sd)
     - [ClementTsang/bottom - Yet another cross-platform graphical process/system monitor](https://github.com/ClementTsang/bottom)
+- [pier-cli/pier - A Linux script management CLI written in Rust](https://github.com/pier-cli/pier)
 
 ## Talks
 - [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)

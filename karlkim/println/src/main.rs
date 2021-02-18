@@ -151,8 +151,8 @@ fn print_stock_pretty_with_table_width(table_width: usize, ticker: &str, bid: i6
     } else {
         (table_width - ticker_width)/2 + 1 
     };
-    let bid = Money::from_minor(bid, iso::USD);
-    let ask = Money::from_minor(ask, iso::USD);
+    let bid = Money::from_minor(bid, iso::USD).to_string();
+    let ask = Money::from_minor(ask, iso::USD).to_string();
 
     // println!("table_length: {}", table_width);
     // println!("ticker_width: {}", ticker_width);
@@ -163,7 +163,7 @@ fn print_stock_pretty_with_table_width(table_width: usize, ticker: &str, bid: i6
     println!("┌{:─>left_width$}┤{}├{:─>right_width$}┐", "", ticker.blue(), "", left_width=left_width-2, right_width=right_width-2);
     println!("│{: ^left_width$}└{:─^ticker_width$}┘{: ^right_width$}│", "bid".green(), "┬", "ask".red(), left_width=left_width-2, right_width=right_width-2, ticker_width=ticker_width);
     println!("├{:─^left_width$}{:─^ticker_width$}{:─^right_width$}┤", "", "┼", "", left_width=left_width-1, right_width=right_width-1, ticker_width=ticker_width);
-    println!("│{: ^left_width$}{: ^ticker_width$}{: ^right_width$}│", bid.to_string(), "│", ask.to_string(), left_width=left_width-1, right_width=right_width-1, ticker_width=ticker_width);
+    println!("│{: ^left_width$}{: ^ticker_width$}{: ^right_width$}│", bid, "│", ask, left_width=left_width-1, right_width=right_width-1, ticker_width=ticker_width);
     println!("└{:─^left_width$}{:─^ticker_width$}{:─^right_width$}┘", "", "┴", "", left_width=left_width-1, right_width=right_width-1, ticker_width=ticker_width);
 }
 
