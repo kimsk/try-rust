@@ -5,7 +5,9 @@ use std::fs;
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let contents = fs::read_to_string(config.filename)?;
 
-    println!("With text:\n{}", contents);
+    for line in search(&config.query, &contents) {
+        println!("{}", line);
+    }
 
     Ok(())
 }
@@ -15,8 +17,15 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 // In this case, we indicate that the returned vector should contain string slices that reference slices of the argument contents (rather than the argument query).
 
 // In other words, we tell Rust that the data returned by the search function will live as long as the data passed into the search function in the contents argument. This is important! The data referenced by a slice needs to be valid for the reference to be valid;
+// Other programming languages don’t require you to connect arguments to return values in the signature.
 pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    vec![]
+    let mut results = Vec::new();
+    for line in contents.lines() {
+        if line.contains(query) {
+            results.push(line);
+        }
+    }
+    results 
 }
 
 // https://stackoverflow.com/questions/57234140/how-to-assert-errors-in-rust
