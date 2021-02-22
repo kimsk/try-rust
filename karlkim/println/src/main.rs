@@ -83,8 +83,14 @@ fn main() {
     // }
 
     // capturing
-    let print_stock_pretty = |ticker: &str, bid: i64, ask: i64| {
+    let _print_stock_pretty = |ticker, bid, ask| {
         print_stock_pretty_with_table_width(table_width, ticker, bid, ask);
+    };
+    let print_stock_pretty_40 = |ticker, bid, ask| {
+        print_stock_pretty_with_table_width(40, ticker, bid, ask);
+    };
+    let print_stock_pretty_80 = |ticker, bid, ask| {
+        print_stock_pretty_with_table_width(80, ticker, bid, ask);
     };
 
     //print_padding();
@@ -99,7 +105,9 @@ fn main() {
         // print_stock_pretty(ticker, bid, ask);
         //print_stock_pretty_with_table_width(table_width, ticker, bid, ask);
         print_stock(ticker, bid, ask);
-        print_stock_pretty(ticker, bid, ask);
+        //print_stock_pretty(ticker, bid, ask);
+        print_stock_pretty_40(ticker, bid, ask);
+        print_stock_pretty_80(ticker, bid, ask);
     }
 
     //
