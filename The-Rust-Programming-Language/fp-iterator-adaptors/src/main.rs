@@ -13,6 +13,13 @@ fn main() {
     for v in c {
         println!("counter: {}", v);
     }
+
+
+    let v2: Vec<i32> = vec![2, 3, 4];
+    let vv = v1.iter().zip(v2);
+    for v in vv {
+        println!("({}, {})", v.0, v.1);
+    }
 }
 
 #[test]

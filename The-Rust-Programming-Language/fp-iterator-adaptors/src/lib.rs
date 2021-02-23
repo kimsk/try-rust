@@ -65,7 +65,6 @@ impl Counter {
     }
 }
 
-// ANCHOR: here
 impl Iterator for Counter {
     type Item = u32;
 
@@ -78,7 +77,6 @@ impl Iterator for Counter {
         }
     }
 }
-// ANCHOR_END: here
 
 #[test]
 fn calling_next_directly() {
@@ -104,14 +102,67 @@ fn using_other_iterator_trait_methods() {
 
 #[test]
 fn using_other_iterator_trait_methods2() {
+    let mut c = Counter::new();
+    println!("Counter::new() using `loop`");
+    loop {
+        match c.next() {
+            Some(v) => println!("({})", v),
+            _ => break,
+        }
+    }
+    // when using next(), iterator was consumed, and can't be iterated again
+    // solution is cloned!
+    println!("Counter::new() using `while let`");
+    let mut c = Counter::new();
+    while let Some(v) = c.next() {
+        println!("({})", v);
+    }
+
     let c = Counter::new();
-    println!("counter: {:#?}", c);
-    let c = c.zip(Counter::new().skip(1));
-    println!("zip: {:#?}", c);
-    let c = c.map(|(a, b)| a * b);
-    println!("map: {:#?}", c);
-    let c = c.filter(|x| x % 3 == 0);
-    println!("filter: {:#?}", c);
-    let sum = c.sum::<u32>();
+    let c = c.zip(Counter::new().skip(1)).collect::<Vec<_>>();
+    println!("zip(Counter::new().skip(1))");
+    for &v in &c {
+        println!("({}, {})", v.0, v.1);
+    }
+
+    let c: Vec<u32> = c.iter().map(|(a, b)| a * b).collect();
+    println!("map(|(a, b)| a * b)");
+    for &v in &c {
+        println!("({})", v);
+    }
+
+    let c: Vec<&u32> = c.iter().filter(|x| *x % 3 == 0).collect();
+    println!("filter(|x| *x % 3 == 0)");
+    for &v in &c {
+        println!("({})", v);
+    }
+
+    let sum = c.iter().map(|x| *x).sum::<u32>();
     assert_eq!(18, sum);
+}
+
+
+// https://stackoverflow.com/questions/59123462/why-is-iterating-over-a-collection-via-for-loop-considered-a-move-in-rust
+// for v in c -- will move iterator
+// for &v in &c#[test]
+#[test]
+fn for_loop_move() {
+    let list: Vec<i32> = vec![1, 2, 3, 4];
+    for v in list {
+        println!("for_loop_move: {}", v);
+    }
+
+    // list is moved by for-loop above (into_iter)
+    // println!("{:?}", list);
+}
+
+#[test]
+fn for_loop_borrow() {
+    let list: Vec<i32> = vec![1, 2, 3, 4];
+    for &v in &list {
+        println!("for_loop_borrow: {}", v);
+    }
+
+    // list is borrowed by for-loop above
+    println!("for_loop_borrow: {:?}", list);
 }
