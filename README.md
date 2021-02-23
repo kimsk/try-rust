@@ -53,6 +53,7 @@
 
 ## Game Development
 - [Are we game yet?](https://arewegameyet.rs/)
+- [Why Rust is the Future of Game Development - November 2020 - PETER CARDWELL-GARDNER](https://thefuntastic.com/blog/why-rust-is-the-future-game-dev)
 - [Bevy — Rust Game Engine](https://gamefromscratch.com/bevy-rust-game-engine/)
 - [Bevy](https://bevyengine.org/)
 - [Amethyst game engine](https://book.amethyst.rs/stable/)
