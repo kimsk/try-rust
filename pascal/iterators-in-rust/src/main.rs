@@ -1,8 +1,12 @@
 #![allow(dead_code, unused_imports)]
 use std::collections::HashMap;
 
+mod counter_iterator;
 mod counter_iter;
 mod counter_into_iter;
+mod iterator_adapters;
+mod iterator_consumers;
+mod play_with_iterators;
 
 fn main() {
     // for_default();
@@ -19,18 +23,35 @@ fn main() {
     // loop_match_into_iter();
     // loop_match_dbg_into_iter();
     //for_mut()
-    counter_iter::counter_iter();
+
+    counter_iterator::counter_iter();
+    counter_iterator::counter_iter_next();
     counter_into_iter::counter_into_iter();
+    counter_into_iter::counter_into_iter_desugar();
     counter_into_iter::counter_into_iter_reference();
+
+
+    iterator_adapters::map();
+    iterator_adapters::take();
+    iterator_adapters::filter();
+    iterator_adapters::chaining();
+
+    iterator_consumers::find();
+    iterator_consumers::collect_i32();
+    iterator_consumers::collect_foo_i32();
+
+    play_with_iterators::twice_reference();
+    play_with_iterators::for_iterators_vec();
+    play_with_iterators::for_iterators_array();
 }
 
-// fn for_mut() {
-//     let names: Vec<String> = vec!["Pascal".to_string(), "Elvira".to_string()];
-//     for name in names {
-//         name.push('x');
-//         dbg!(name);
-//     }
-// }
+fn for_mut() {
+    let mut names: Vec<String> = vec!["Pascal".to_string(), "Elvira".to_string()];
+    for name in &mut names {
+        name.push('x');
+        dbg!(name);
+    }
+}
 
 fn loop_match_into_iter() {
     let names: Vec<&str> = vec!["Pascal", "Elvira", "Dominic", "Christoph"];
