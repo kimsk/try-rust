@@ -20,6 +20,9 @@
 - [The Little Book of Rust Books](https://lborb.github.io/book/title-page.html)
 - [Rust Language Cheat Sheet](https://cheats.rs/)
 - [You Want to Learn Rust but You Don’t Know Where to Start](https://towardsdatascience.com/you-want-to-learn-rust-but-you-dont-know-where-to-start-fc826402d5ba)
+- [Rust Exercism](https://exercism.io/tracks/rust)
+- [Learn X in Y minutes - Where X=Rust](https://learnxinyminutes.com/docs/rust/)
+- [A half-hour to learn Rust - January 2020 - Amos](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
 
 ## Concepts
 - [My explanation of the main concepts in Rust - Sep 2016 - Darin Minamoto](https://gist.github.com/DarinM223/e7237114cfdcf3644f90#:~:text=There%20are%20three%20main%20concepts,when%20it%20will%20be%20destroyed)
@@ -41,6 +44,7 @@
 - [The Embedded Rust Book](https://docs.rust-embedded.org/book/intro/index.html)
 - [Rust, Arduino and Embedded Development as a Beginner](https://blog.cecton.com/posts/rust-and-arduino-part1/)
 - [Rust for IOT](https://www.youtube.com/watch?v=P3RUm6__xs4)
+- [Physical Computing with Rust (Raspberry Pi)](https://rahul-thakoor.github.io/physical-computing-rust/step_0.html)
 
 ## Web, WebAssembly
 - [Are we web yet?](https://www.arewewebyet.org/)
@@ -58,9 +62,11 @@
 - [Bevy — Rust Game Engine](https://gamefromscratch.com/bevy-rust-game-engine/)
 - [Bevy](https://bevyengine.org/)
 - [Amethyst game engine](https://book.amethyst.rs/stable/)
+- [Rust sokoban](https://sokoban.iolivia.me/)
+
 ### Pong
-    - [Tutorial: Pong - Tetra](https://tetra.seventeencups.net/tutorial/)
-    - [Pong Tutorial - Amethyst](https://book.amethyst.rs/book/stable/pong-tutorial)
+- [Tutorial: Pong - Tetra](https://tetra.seventeencups.net/tutorial/)
+- [Pong Tutorial - Amethyst](https://book.amethyst.rs/book/stable/pong-tutorial)
 
 
 ## Machine Learning
@@ -99,6 +105,8 @@
     - [chmln/sd - Intuitive find & replace CLI (sed alternative)](https://github.com/chmln/sd)
     - [ClementTsang/bottom - Yet another cross-platform graphical process/system monitor](https://github.com/ClementTsang/bottom)
 - [pier-cli/pier - A Linux script management CLI written in Rust](https://github.com/pier-cli/pier)
+- [fdehau/tui-rs - Build terminal user interfaces and dashboards using Rust](https://github.com/fdehau/tui-rs)
+- [mitsuhiko/console - A rust console and terminal abstraction](https://github.com/mitsuhiko/console)
 
 ## System Programming
 - [CS 110L: Safety in Systems Programming - Spring 2020 - Ryan Eberhardt & Armin Namavari](https://reberhardt.com/cs110l/spring-2020/)
@@ -109,9 +117,14 @@
 - [RustConf 2019 - Closing Keynote by Lin Clark](https://www.youtube.com/watch?v=KFpU30xluxo)
 - [RustConf 2020 - Closing Keynote by Siân Griffin](https://www.youtube.com/watch?v=RNsEsZbXE-4)
 - [How I Convinced the World's Largest Package Manager to Use Rust, and So Can You! - May 2017 - Ashley Williams](https://www.youtube.com/watch?v=GCsxYAxw3JQ)
+- [rust-next-40-years](https://gitlab.com/carols10cents/rust-next-40-years)
+- [How Rust Views Tradeoffs - March 2019 - Stephen Klabnik](https://www.infoq.com/presentations/rust-tradeoffs/)
 
 ## Development Environment
 - [NixOS - Rust {#rust}](https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/rust.section.md)
+
+## News & Update
+- [This Week in Rust](https://this-week-in-rust.org/)
 
 ## References
 - [Learn Rust](https://www.rust-lang.org/learn)
