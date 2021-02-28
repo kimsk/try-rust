@@ -105,3 +105,4 @@ let slice = &a[1..3];
 - [Understanding Ownership - The Rust Programming Language](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 - [A closer look at Ownership in Rust - October 2019 - Pascal Precht](https://blog.thoughtram.io/ownership-in-rust/)
 - [Rust's Ownership model for JavaScript developers - May 2015 -Christoph Burgdorf](https://blog.thoughtram.io/rust/2015/05/11/rusts-ownership-model-for-javascript-developers.html)
+- [Rust ownership, the hard way - August 2019 - Chris Morgan](https://chrismorgan.info/blog/rust-ownership-the-hard-way/)

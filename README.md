@@ -47,6 +47,7 @@
 - [Rust 🦀 and WebAssembly 🕸](https://rustwasm.github.io/docs/book/)
 - [Rust, WebAssembly, and the future of Serverless - September 2019 - Steve Klabnik](https://youtube.com/watch?v=CMB6AlE1QuI)
 - [Rust and WASM in less then 20 minutes - December 2019 - Antonio De La Cruz](https://www.youtube.com/watch?v=ltP-8PXRqrw)
+- [Look, Ma! No JS! - Compiling Rust to WebAssembly - February 2021 - Christoph Traut](https://www.novatec-gmbh.de/en/blog/look-ma-no-js-compiling-rust-to-webassembly/)
 
 ## OS
 - [Writing an OS in Rust - Philipp Oppermann](https://os.phil-opp.com/)
@@ -57,6 +58,10 @@
 - [Bevy — Rust Game Engine](https://gamefromscratch.com/bevy-rust-game-engine/)
 - [Bevy](https://bevyengine.org/)
 - [Amethyst game engine](https://book.amethyst.rs/stable/)
+### Pong
+    - [Tutorial: Pong - Tetra](https://tetra.seventeencups.net/tutorial/)
+    - [Pong Tutorial - Amethyst](https://book.amethyst.rs/book/stable/pong-tutorial)
+
 
 ## Machine Learning
 - [Are we learning yet?](http://www.arewelearningyet.com/)
@@ -94,6 +99,9 @@
     - [chmln/sd - Intuitive find & replace CLI (sed alternative)](https://github.com/chmln/sd)
     - [ClementTsang/bottom - Yet another cross-platform graphical process/system monitor](https://github.com/ClementTsang/bottom)
 - [pier-cli/pier - A Linux script management CLI written in Rust](https://github.com/pier-cli/pier)
+
+## System Programming
+- [CS 110L: Safety in Systems Programming - Spring 2020 - Ryan Eberhardt & Armin Namavari](https://reberhardt.com/cs110l/spring-2020/)
 
 ## Talks
 - [Stanford Seminar The Rust Programming Language - March 2015 - Aaron Turon](https://www.youtube.com/watch?v=SZvs15hC81U)
