@@ -1,12 +1,14 @@
 #![allow(dead_code, unused_imports)]
 use std::collections::HashMap;
 
+use create_iter::get_max_temperatures;
+
 mod counter_iterator;
-mod counter_iter;
 mod counter_into_iter;
 mod iterator_adapters;
 mod iterator_consumers;
 mod play_with_iterators;
+mod create_iter;
 
 fn main() {
     // for_default();
@@ -24,25 +26,28 @@ fn main() {
     // loop_match_dbg_into_iter();
     //for_mut()
 
-    counter_iterator::counter_iter();
-    counter_iterator::counter_iter_next();
-    counter_into_iter::counter_into_iter();
-    counter_into_iter::counter_into_iter_desugar();
-    counter_into_iter::counter_into_iter_reference();
+    // counter_iterator::counter_iter();
+    // counter_iterator::counter_iter_next();
+    // counter_into_iter::counter_into_iter();
+    // counter_into_iter::counter_into_iter_desugar();
+    // counter_into_iter::counter_into_iter_reference();
 
 
-    iterator_adapters::map();
-    iterator_adapters::take();
-    iterator_adapters::filter();
-    iterator_adapters::chaining();
+    // iterator_adapters::map();
+    // iterator_adapters::take();
+    // iterator_adapters::filter();
+    // iterator_adapters::chaining();
 
-    iterator_consumers::find();
-    iterator_consumers::collect_i32();
-    iterator_consumers::collect_foo_i32();
+    // iterator_consumers::find();
+    // iterator_consumers::collect_i32();
+    // iterator_consumers::collect_foo_i32();
 
-    play_with_iterators::twice_reference();
-    play_with_iterators::for_iterators_vec();
-    play_with_iterators::for_iterators_array();
+    // play_with_iterators::twice_reference();
+    // play_with_iterators::for_iterators_vec();
+    // play_with_iterators::for_iterators_array();
+
+    create_iter::get_5_temperatures();
+    create_iter::get_max_temperatures();
 }
 
 fn for_mut() {
