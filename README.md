@@ -13,7 +13,7 @@
 
 - [Why You Should Learn Rust in 2021 - January 2021 - Serokell](https://dev.to/serokell/why-you-should-learn-rust-in-2021-po)
 
-## Rust Intro.
+## Learning Rust
 - [Tour of Rust](https://tourofrust.com/)
 - [Introduction to Rust, Gints Dreimanis](https://serokell.io/blog/rust-guide)
 - [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_0.html)
@@ -23,6 +23,7 @@
 - [Rust Exercism](https://exercism.io/tracks/rust)
 - [Learn X in Y minutes - Where X=Rust](https://learnxinyminutes.com/docs/rust/)
 - [A half-hour to learn Rust - January 2020 - Amos](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
+- [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
 
 ## Concepts
 - [My explanation of the main concepts in Rust - Sep 2016 - Darin Minamoto](https://gist.github.com/DarinM223/e7237114cfdcf3644f90#:~:text=There%20are%20three%20main%20concepts,when%20it%20will%20be%20destroyed)
@@ -107,7 +108,7 @@
 - [pier-cli/pier - A Linux script management CLI written in Rust](https://github.com/pier-cli/pier)
 - [fdehau/tui-rs - Build terminal user interfaces and dashboards using Rust](https://github.com/fdehau/tui-rs)
 - [mitsuhiko/console - A rust console and terminal abstraction](https://github.com/mitsuhiko/console)
-
+- [crossterm-rs/crossterm - Cross platform terminal library rust](https://github.com/crossterm-rs/crossterm)
 ## System Programming
 - [CS 110L: Safety in Systems Programming - Spring 2020 - Ryan Eberhardt & Armin Namavari](https://reberhardt.com/cs110l/spring-2020/)
 
