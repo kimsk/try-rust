@@ -32,8 +32,8 @@ impl Iterator for Counter1 {
     }
 }
 
-pub fn counter_iter_next() {
-    dbg!("counter_iter::counter_iter_next");
+pub fn counter_iterator_next() {
+    dbg!("counter_iterator::counter_iterator_next");
     let mut counter = Counter1::new(7);
     loop {
         // counter implements Iterator trait, so it has next()
@@ -44,8 +44,8 @@ pub fn counter_iter_next() {
     }
 }
 
-pub fn counter_iter() {
-    dbg!("counter_iter::counter_iter");
+pub fn counter_iterator() {
+    dbg!("counter_iterator::counter_iterator");
     let counter = Counter1::new(7);
     // counter implements Iterator trait
     // Rust automatically implements IntoIterator for any type that implements Iterator.

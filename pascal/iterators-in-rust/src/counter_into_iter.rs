@@ -69,6 +69,7 @@ pub fn counter_into_iter() {
     for i in counter {
         println!("{}", i);
     }
+    //dbg!(counter);
 }
 
 pub fn counter_into_iter_desugar() {

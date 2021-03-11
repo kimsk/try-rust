@@ -19,7 +19,7 @@ impl FahrToCelc {
     }
 }
 
-// impl Iterator for T
+// impl Iterator Trait for T
 impl Iterator for FahrToCelc {
     type Item = (f32, f32);
     fn next(&mut self) -> Option<Self::Item> {
@@ -37,8 +37,10 @@ impl Iterator for FahrToCelc {
 
 pub fn get_max_temperatures() {
     let mut ftc = FahrToCelc::new(0.0, 5.0);
-    for (f, c) in &mut ftc {
+    for (mut f, c) in &mut ftc {
         println!("{:7.2} °F = {:7.2} °C", f, c);
+        f = 0.0;
+        println!("reset f to {}, c is {}", f, c);
     }
     dbg!(ftc);
 

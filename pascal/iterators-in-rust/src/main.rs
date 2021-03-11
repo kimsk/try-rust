@@ -1,14 +1,16 @@
 #![allow(dead_code, unused_imports)]
 use std::collections::HashMap;
 
-use create_iter::get_max_temperatures;
+use fahr_to_celc::get_max_temperatures;
 
 mod counter_iterator;
+mod counter_iter;
 mod counter_into_iter;
 mod iterator_adapters;
 mod iterator_consumers;
 mod play_with_iterators;
-mod create_iter;
+mod fahr_to_celc;
+mod options;
 
 fn main() {
     // for_default();
@@ -46,8 +48,10 @@ fn main() {
     // play_with_iterators::for_iterators_vec();
     // play_with_iterators::for_iterators_array();
 
-    create_iter::get_5_temperatures();
-    create_iter::get_max_temperatures();
+    fahr_to_celc::get_5_temperatures();
+    fahr_to_celc::get_max_temperatures();
+
+    counter_iter::counter3_iter();
 }
 
 fn for_mut() {
