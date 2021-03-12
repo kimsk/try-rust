@@ -44,6 +44,41 @@ impl Iterator for MyIterator {
     }
 }
 
+pub struct MyIteratorRef<'a> {
+    position: char,
+    my: &'a My
+}
+
+impl MyIteratorRef<'_> {
+    pub fn new(my: &My) -> MyIteratorRef {
+        MyIteratorRef { position: 'a', my }
+    }
+}
+
+// impl Iterator for MyIteratorRef<'_> {
+//     type Item = String;
+//     fn next(&mut self) -> Option<Self::Item>{
+//         match self.position {
+//             'a' => {
+//                 self.position = 'b';
+//                 Some(self.my.a)
+//             },
+//             'b' => {
+//                 self.position = 'c';
+//                 Some(self.my.b.clone())
+//             },
+//             'c' => {
+//                 self.position = 'd';
+//                 Some(self.my.c.clone())
+//             },
+//             _ => None
+//         }
+//     }
+// }
+
+// Rust implements IntoIterator for MyIterator for us
+
+// impl IntoIterator for T
 // My is consumed by into_iter
 impl IntoIterator for My {
     type Item = String;
@@ -52,3 +87,9 @@ impl IntoIterator for My {
         MyIterator::new(self)
     }
 }
+
+// impl IntoIterator for &T
+// impl IntoIterator for &My {
+//     type Item = String;
+//     type IntoIter = 
+// }
