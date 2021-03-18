@@ -25,6 +25,15 @@ New traversal operations should be defined for an aggregate object without chang
 
 > Cloning a dedicated Iterator is actually really cheap (cheaper thn cloning the whole collection) because it just copies a reference and a index rather then the entire collection.
 
+## Iterator in Rust
+> We want to use `for looop` with a type that we want. We don't need to know internal of the container, we just want to iterate thru the items inside the container.
+
+1. Rust's `for loop` syntax is actually sugar for iterators (i.e., `IntoIterator::into_iter(values)` & `next()` are called when doing `for v in values`).
+
+1. `into_iter()`, converts the thing implementing `IntoIterator` into an **iterator**.
+
+1. All **Iterators** also implement `IntoIterator`.
+
 # Docs
 ## [std::iter](https://doc.rust-lang.org/std/iter/)
 ```rs

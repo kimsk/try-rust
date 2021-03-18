@@ -1,4 +1,6 @@
 const MAX: i32 = 5;
+
+#[derive(Debug)]
 pub struct CountTo5 {
     // iterator state
     count: i32
