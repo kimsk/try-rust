@@ -1,5 +1,6 @@
 use crate::ided::Ided;
 
+#[derive(Debug, Clone)]
 pub struct Employee {
     pub name: String,
     pub id: i64
