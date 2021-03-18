@@ -1,6 +1,7 @@
 
 # Rust 🦀 
 ## Why Rust?
+- [Getting started with … Rust - March 2021 - Medi Madelen Gwosdz](https://stackoverflow.blog/2021/03/15/getting-started-with-rust/)
 - [Considering Rust - February 2020 - Jon Gjengset](youtube.com/watch?v=DnT-LUQgc7s)
 - [Why should I care about Rust? - Rust Linz, August 2020 - Ryan Levick - ](youtube.com/watch?v=OhCjnyBc448)
 - [What is Rust and why is it so popular? - January 2020 - Jake Goulding](https://stackoverflow.blog/2020/01/20/what-is-rust-and-why-is-it-so-popular/)
@@ -14,7 +15,6 @@
 - [Why You Should Learn Rust in 2021 - January 2021 - Serokell](https://dev.to/serokell/why-you-should-learn-rust-in-2021-po)
 
 ## Learning Rust
-- [Tour of Rust](https://tourofrust.com/)
 - [Introduction to Rust, Gints Dreimanis](https://serokell.io/blog/rust-guide)
 - [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_0.html)
 - [The Little Book of Rust Books](https://lborb.github.io/book/title-page.html)
@@ -24,6 +24,13 @@
 - [Learn X in Y minutes - Where X=Rust](https://learnxinyminutes.com/docs/rust/)
 - [A half-hour to learn Rust - January 2020 - Amos](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
 - [Learn Rust With Entirely Too Many Linked Lists](https://rust-unofficial.github.io/too-many-lists/index.html)
+- [Why is Rust difficult?](https://vorner.github.io/difficult.html)
+
+## Explore Rust
+- [Tour of Rust](https://tourofrust.com/)
+- [rustlings - Small exercises to get you used to reading and writing Rust code!](https://github.com/rust-lang/rustlings)
+- [Rust Playground](https://play.rust-lang.org/)
+- [Rust Compiler Explorer](https://rust.godbolt.org/)
 
 ## Concepts
 - [My explanation of the main concepts in Rust - Sep 2016 - Darin Minamoto](https://gist.github.com/DarinM223/e7237114cfdcf3644f90#:~:text=There%20are%20three%20main%20concepts,when%20it%20will%20be%20destroyed)
