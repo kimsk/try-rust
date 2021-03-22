@@ -28,6 +28,7 @@
 
 ## Explore Rust
 - [Tour of Rust](https://tourofrust.com/)
+- [Rust Koans](https://github.com/crazymykl/rust-koans)
 - [rustlings - Small exercises to get you used to reading and writing Rust code!](https://github.com/rust-lang/rustlings)
 - [Rust Playground](https://play.rust-lang.org/)
 - [Rust Compiler Explorer](https://rust.godbolt.org/)
