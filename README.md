@@ -15,6 +15,7 @@
 - [Why You Should Learn Rust in 2021 - January 2021 - Serokell](https://dev.to/serokell/why-you-should-learn-rust-in-2021-po)
 
 ## Learning Rust
+- [A bunch of links to blog posts, articles, videos, etc for learning Rust](https://github.com/ctjhoa/rust-learning)
 - [Introduction to Rust, Gints Dreimanis](https://serokell.io/blog/rust-guide)
 - [Easy Rust](https://dhghomon.github.io/easy_rust/Chapter_0.html)
 - [The Little Book of Rust Books](https://lborb.github.io/book/title-page.html)
