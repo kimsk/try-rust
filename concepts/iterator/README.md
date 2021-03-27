@@ -26,7 +26,24 @@ New traversal operations should be defined for an aggregate object without chang
 > Cloning a dedicated Iterator is actually really cheap (cheaper thn cloning the whole collection) because it just copies a reference and a index rather then the entire collection.
 
 ## Iterator in Rust
-> We want to use `for looop` with a type that we want. We don't need to know internal of the container, we just want to iterate thru the items inside the container.
+> We want to use `for loop` with a type that we want. We don't need to know internal of the container, we just want to iterate thru the items inside the container.
+
+```rs
+let nums = vec![1, 2, 3];
+
+// bad practice
+for i in 0..nums.len() {
+    println!("{}", nums[i]);
+}
+
+// good practice
+for num in &nums {
+    println!("{}", num);
+}
+```
+- `bad practice` needs `i` which makes code more complicated, and means we have to know how `nums` work.
+- `bad practice` needs bound checking which is less efficient.
+
 
 1. Rust's `for loop` syntax is actually sugar for iterators (i.e., `IntoIterator::into_iter(values)` & `next()` are called when doing `for v in values`).
 
@@ -100,9 +117,16 @@ impl<I: Iterator> IntoIterator for I
 > If a collection type `C` provides `iter()`, it usually also implements `IntoIterator` for `&C`, with an implementation that just calls `iter()`. Likewise, a collection `C` that provides `iter_mut()` generally implements `IntoIterator` for `&mut C` by delegating to `iter_mut()`.
 
 
+## Players in Iterators
+1. `iterators` give you a sequence of values.
+1. `iterator adaptors` operate on an `iterator`, producing a new `iterator` with a different output sequence.
+    - `map`, `take`, `filter`
+1. `consumers` operate on an `iterator`, producing some final set of values.
+    - `collect`, `find`, `fold`
+    - Consumers are important due to one additional property of iterators, **laziness**
 
 
 
-
-# Blogs
+# Links
+- [Iterators - Effective Rust](https://doc.rust-lang.org/1.5.0/book/iterators.html)
 - [Creating an Iterator in Rust - Mar 2021 - Ludwig Stecher](https://aloso.github.io/2021/03/09/creating-an-iterator)

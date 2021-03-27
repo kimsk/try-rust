@@ -37,6 +37,7 @@
 ## Concepts
 - [My explanation of the main concepts in Rust - Sep 2016 - Darin Minamoto](https://gist.github.com/DarinM223/e7237114cfdcf3644f90#:~:text=There%20are%20three%20main%20concepts,when%20it%20will%20be%20destroyed)
 - [Zero-cost abstractions in Rust - Feb 2018 - Antonin Carette](https://carette.xyz/posts/zero_cost_abstraction/)
+- [Associated type constructors](http://smallcultfollowing.com/babysteps/blog/2016/11/02/associated-type-constructors-part-1-basic-concepts-and-introduction/)
 
 ## [Memory Management & Ownership Model](Ownership.md)
 
@@ -87,6 +88,7 @@
 
 ## Functional Programming
 - [YOW! Lambda Jam 2019 - Amit Dev - Introduction to Functional Programming in Rust](https://www.youtube.com/watch?v=9x7W3_KKKeA)
+
 
 ## Finance
 - [`Probably` the fastest Black Scholes Pricer in world](https://mushfaqueronniechowdhury.medium.com/probably-the-fastest-black-scholes-pricer-in-world-34103e97f7eb)
@@ -140,5 +142,5 @@
 - [Learn Rust](https://www.rust-lang.org/learn)
 - [The Rust Standard Library](https://doc.rust-lang.org/std/index.html)
 - [The Rust community’s crate registry](https://crates.io/)
-- [Rust Playground](https://play.rust-lang.org/)
 - [Rust Design Patterns](https://rust-unofficial.github.io/patterns/intro.html)
+- [Effective Rust](https://doc.rust-lang.org/1.5.0/book/README.html)

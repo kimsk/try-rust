@@ -179,6 +179,7 @@ fn my_iterator() {
     for c in my_iterator {
         dbg!(c);
     }
+    // MyIterator implements Iterator trait, hence, IntoIterator
     // dbg!(my); // my is consumed by MyIterator::new
 }
 
