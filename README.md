@@ -120,7 +120,6 @@
 - [fdehau/tui-rs - Build terminal user interfaces and dashboards using Rust](https://github.com/fdehau/tui-rs)
 - [mitsuhiko/console - A rust console and terminal abstraction](https://github.com/mitsuhiko/console)
 - [crossterm-rs/crossterm - Cross platform terminal library rust](https://github.com/crossterm-rs/crossterm)
-- [ClementTsang/bottom - Yet another cross-platform graphical process/system monitor.](https://github.com/ClementTsang/bottom)
 
 ## System Programming
 - [CS 110L: Safety in Systems Programming - Spring 2020 - Ryan Eberhardt & Armin Namavari](https://reberhardt.com/cs110l/spring-2020/)
